@@ -7,30 +7,8 @@ const profileRoutes = require("./routes/profileRoutes");
 const portfolioRoutes = require("./routes/portfolioRoutes");
 
 const PORT = process.env.PORT || 8000;
-const CLIENT_URL = process.env.CLIENT_URL;
 
-const allowedOrigins = CLIENT_URL.split(",").map((url) => url.trim());
-console.log("Allowed Origins:", allowedOrigins);
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    // Allow requests from Postman, server-to-server, or no-origin requests
-    if (!origin) return callback(null, true);
-
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  exposedHeaders: ["Content-Range", "X-Content-Range"],
-  maxAge: 600,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/api", dashboardRoutes);
 app.use("/api", profileRoutes);
 app.use("/api", portfolioRoutes);
