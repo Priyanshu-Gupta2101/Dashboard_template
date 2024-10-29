@@ -39,7 +39,7 @@ const Inputs = () => {
   };
 
   return (
-    <div className="lg2:h-[calc(100vh-80px)] overflow-y-auto p-4 lg2:p-6">
+    <div className="lg2:h-[calc(100vh-80px)] overflow-y-auto p-4 pb-20 lg2:p-6">
       {/* Header */}
       <div className="bg-white p-4 md:p-6 space-y-6 rounded-lg">
         <div className="flex justify-between items-center mb-6">
