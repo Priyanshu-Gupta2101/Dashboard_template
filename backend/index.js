@@ -7,16 +7,17 @@ const profileRoutes = require("./routes/profileRoutes");
 const portfolioRoutes = require("./routes/portfolioRoutes");
 
 const PORT = process.env.PORT || 8000;
-const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+const CLIENT_URL = process.env.CLIENT_URL;
 
-// CORS configuration
+const allowedOrigins = CLIENT_URL.split(",").map((url) => url.trim());
+console.log("Allowed Origins:", allowedOrigins);
+
 const corsOptions = {
   origin: function (origin, callback) {
+    // Allow requests from Postman, server-to-server, or no-origin requests
     if (!origin) return callback(null, true);
 
-    const allowedOrigins = CLIENT_URL.split(",").map((url) => url.trim());
-
-    if (allowedOrigins.indexOf(origin) !== -1) {
+    if (allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
