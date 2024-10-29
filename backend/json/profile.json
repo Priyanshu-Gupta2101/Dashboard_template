@@ -1,0 +1,17 @@
+{
+  "personalInfo": {
+    "firstName": "Lorem",
+    "lastName": "Ipsum",
+    "email": "lorem.ipsum@example.com",
+    "phone": "+1 (555) 123-4567",
+    "profilePicture": "https://s3-alpha-sig.figma.com/img/ecaa/dbab/5358b1c4de8696613bd0b067440bec38?Expires=1731283200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oaA4ZGQAjmxrT5FfnkpH7--64qq6thRZyYpr0MVzibWOYsMq-WNT~UStTCTaanxMWWSHn7mmPIfbzxK5g9qwImDgLwa~D~muf-vxknhH9sHHzw3HHrAqk2vKPdC1wY9mVAOdLii~59Uhej3wT8vbYAyWVrGc-nTd3K28bl0ZcReA0mmQqvIDfoZCh1YNXJ50AuiND1n6j7Z~FEFzc6-RfPn~qWmsdbf8Fm6zx~UmEpW7mL~g0Z5l0BkARztT1vwvmZYYGXZ0OfH048pwQycLggo7E3gb9WMpQXJ8o3VyZgo~4aNhYoSOJeJD632LaGm90WSuRBrcyrj-xgaTSaHqBA__"
+  },
+  "accountSettings": {
+    "language": "English",
+    "timeZone": "UTC-5 (Eastern Time)"
+  },
+  "notifications": {
+    "emailNotifications": true,
+    "projectUpdates": true
+  }
+}

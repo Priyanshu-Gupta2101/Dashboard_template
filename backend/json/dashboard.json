@@ -1,0 +1,19 @@
+{
+  "performanceData": [
+    { "month": "Jan", "completed": 65, "ongoing": 35 },
+    { "month": "Feb", "completed": 75, "ongoing": 25 },
+    { "month": "Mar", "completed": 85, "ongoing": 15 },
+    { "month": "Apr", "completed": 95, "ongoing": 5 }
+  ],
+  "progressData": [
+    { "day": "Mon", "progress": 20 },
+    { "day": "Tue", "progress": 40 },
+    { "day": "Wed", "progress": 55 },
+    { "day": "Thu", "progress": 70 },
+    { "day": "Fri", "progress": 85 }
+  ],
+  "totalProjects": 125,
+  "completedProjects": 89,
+  "inProgress": 36,
+  "achievementScore": 92
+}
