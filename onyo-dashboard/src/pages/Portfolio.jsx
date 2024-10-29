@@ -5,8 +5,7 @@ import searchIcon from "../assets/search.svg";
 import CardList from "../components/CardList";
 
 const Portfolio = () => {
-  const [showFilter, setShowFilter] = useState(false);
-  const [activeTab, setActiveTab] = useState("project"); // Add state for active tab
+  const [activeTab, setActiveTab] = useState("project");
 
   return (
     <div className="md:p-6 relative">

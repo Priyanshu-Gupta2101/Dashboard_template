@@ -10,7 +10,9 @@ const CardList = () => {
   const fetchData = async () => {
     try {
       setStatus("loading");
-      const response = await fetch("http://localhost:8000/api/portfolio");
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/portfolio`
+      );
       const result = await response.json();
       setData(result);
       setStatus("success");

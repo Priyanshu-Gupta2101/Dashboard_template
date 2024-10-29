@@ -20,7 +20,9 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       setStatus("loading");
-      const response = await fetch("http://localhost:8000/api/dashboard");
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/dashboard`
+      );
       const data = await response.json();
       setDashboardData(data);
       setStatus("success");

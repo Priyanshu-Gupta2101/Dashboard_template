@@ -15,7 +15,9 @@ const Profile = () => {
   const fetchProfileData = async () => {
     try {
       setStatus("loading");
-      const response = await fetch("http://localhost:8000/api/profile");
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/profile`
+      );
       const data = await response.json();
       setProfileData(data);
       setStatus("success");
@@ -31,7 +33,7 @@ const Profile = () => {
 
   const updateNotificationSettings = async (type, value) => {
     try {
-      await fetch("http://localhost:8000/api/profile/notifications", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/profile/notifications`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
